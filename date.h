@@ -5,14 +5,14 @@
 #include <string>
 
 class Date{
-	Private:
+	private:
 		int month;
 		int day;
 		int year;
-	Public:
+	public:
 		Date();
-		init(std::string dateString);
+		void init(std::string dateString);
 		void printDate();
-}
+};
 
 #endif
