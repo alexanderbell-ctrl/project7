@@ -64,7 +64,6 @@ print month day, year
 -init(addressString)
 ```
 string street, city, state, zip
-stringstream convderter
 getLine (addressString, street string, ',')
 getLine (~, city string, ~)
 getLine(~, state string, ~)
