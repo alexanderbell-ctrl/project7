@@ -20,7 +20,10 @@ void Date::init(std::string dateString){
 	getline(converter, stringDay, '/');
 	getline(converter, stringYear);
 
-	converter << stringMonth << stringDay << stringYear;
+	converter.clear();
+	converter.str("");
+
+	converter << stringMonth << " " << stringDay << " " <<stringYear;
 	converter >> month >> day >> year;
 } //end init
 
