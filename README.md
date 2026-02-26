@@ -17,11 +17,12 @@ class Student {
     string firstName
     string lastName
     int creditHours
-    Address address
-    Date birthDate
-    Date gradDate
+    * new Address address
+    * new Date birthDate
+    * newDate gradDate
     Student()
     init(string student data)
+    ~Student()
     printStudent()
     getLastFirst() : string
 }
