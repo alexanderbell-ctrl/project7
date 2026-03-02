@@ -97,13 +97,24 @@ converter tempCreditHours --> int creditHours
 address = new tempAddress
 birthDate = new tempBirthDate
 gradDate = new tempGradDate
-
 ```
 -~Student()
 ```
 delete address
 delete birthDate
 delete gradDate
+```
+-printStudent()
+```
+print first lastname
+print address
+print "DOB:" + birthDate
+print "Grad:" + gradDate
+print "Credits:" + creditHours
+```
+-getLastFirst()
+```
+print lastname + ',' + firstname
 ```
 ### Address
 -init(addressString)
