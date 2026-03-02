@@ -12,7 +12,7 @@ class Student{
 	public:
 		Student();
 		void init(std::string studentString);
-		void ~Student();
+		~Student();
 		void printStudent();
 		void getLastFirst();
 };
