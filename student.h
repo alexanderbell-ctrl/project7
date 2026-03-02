@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <string>
+#include "address.h"
+#include "date.h"
 
 class Student{
 	private:
@@ -15,6 +17,9 @@ class Student{
 		~Student();
 		void printStudent();
 		void getLastFirst();
+	    	Address* address;
+	    	Date* birthDate;
+	    	Date* gradDate;
 };
 
 #endif

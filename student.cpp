@@ -61,3 +61,9 @@ void Student::printStudent(){
 	//std::cout << "Grad: " << tempGradDate << std::endl;
 	//std::cout << "Credits: " << creditHours << std::endl;
 } //end printStudent
+
+Student::~Student(){
+	delete address;
+	delete gradDate;
+	delete birthDate;
+} //end destructor
