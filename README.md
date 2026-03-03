@@ -41,6 +41,28 @@ Student --> Date
 ```
 
 ## Algorithm
+## Main
+```
+//student vector
+
+//menu options
+    0 - quit
+    1 - print names
+    2 - print data
+user input int menuOption:
+
+keepGoing
+
+while keepGoing:
+    if menuOption == 0
+        keepGoing false
+    if ~ == 1
+        for each student in vector:
+            student->getLastFirst()
+    if ~ == 2
+        for each student in vector:
+            printStudent
+```
 ### Date
 -init(addressDate)
 ```
