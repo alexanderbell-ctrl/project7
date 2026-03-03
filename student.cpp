@@ -61,6 +61,11 @@ void Student::printStudent(){
 
 } //end printStudent
 
+void Student::getLastFirst(){
+	std::cout << "------------" << std::endl;
+	std::cout << lastName << " " << firstName << std::endl; 
+} //end getLastFirst
+
 Student::~Student(){
 	delete address;
 	delete gradDate;

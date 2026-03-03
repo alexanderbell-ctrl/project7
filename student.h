@@ -14,12 +14,12 @@ class Student{
 	public:
 		Student();
 		void init(std::string studentString);
+			Address* address;
+	    	Date* birthDate;
+	    	Date* gradDate;
 		~Student();
 		void printStudent();
 		void getLastFirst();
-	    	Address* address;
-	    	Date* birthDate;
-	    	Date* gradDate;
 };
 
 #endif
