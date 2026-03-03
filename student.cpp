@@ -48,10 +48,17 @@ void Student::init(std::string studentString){
 
 void Student::printStudent(){
 	std::cout << firstName << " " << lastName << std::endl;
-	std::cout << address << std::endl;
-	std::cout << "DOB: " << birthDate << std::endl;
-	std::cout << "Grad: " << gradDate << std::endl;
+
+	address->printAddress();
+
+	std::cout << "DOB: ";
+	birthDate->printDate();
+
+	std::cout << "Grad: ";
+	gradDate->printDate();
+
 	std::cout << "Credits: " << creditHours << std::endl;
+
 } //end printStudent
 
 Student::~Student(){
