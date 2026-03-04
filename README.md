@@ -1,5 +1,5 @@
-# project7
-Heap of Students
+# project7.2
+Heap of Students Pt.2
 
 ## UML Diagram
 ```mermaid
