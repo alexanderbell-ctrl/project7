@@ -43,13 +43,15 @@ Student --> Date
 ## Algorithm
 ## Main
 ```
-//student vector
+create student vector w/ Student pointers
+loadStudents loads vector from file
 
 //menu options
     0 - quit
     1 - print names
     2 - print data
-user input int menuOption:
+    3 - find student
+user input int menuOption
 
 keepGoing
 
@@ -57,11 +59,12 @@ while keepGoing:
     if menuOption == 0
         keepGoing false
     if ~ == 1
-        for each student in vector:
-            student->getLastFirst()
+        showStudentNames
     if ~ == 2
-        for each student in vector:
-            printStudent
+        printStudents
+    if ~ == 3
+        findStudent
+delStudents
 ```
 ### Date
 -init(addressDate)
