@@ -20,6 +20,7 @@ int main(){
 
 	loadStudents(students);
 	showStudentNames(students);
+	printStudents(students);
 
 /*
   std::cout << "Hello!" << std::endl;
@@ -50,6 +51,12 @@ void showStudentNames(std::vector<Student*>& students){
 		std::cout << ", " << student->getCreditHours() << std::endl;
 	} // end for
 } // end showStudentNames
+
+void printStudents(std::vector<Student*>& students){
+	for(Student* student: students){
+		student->printStudent();
+	} // end for
+} // end printStudents
 
 
 void testAddress(){
