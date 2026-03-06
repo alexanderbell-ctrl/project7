@@ -37,7 +37,8 @@ int main(){
 			findStudent(students);
 		} // end if 3
 		else{
-			whileTrue = false;	
+			whileTrue = false;
+			delStudents(students);
 		} // end if 0	
 
 	} // end while
@@ -86,7 +87,7 @@ void findStudent(std::vector<Student*>& students){
 	for(Student* student: students){
 		if(student->getLastFirst().find(studentFind) != std::string::npos){
 			found = true;
-			std::cout << "FOUND!";
+			student->printStudent();
 		} // end if		
 	} // end for
 	if(found == false){
@@ -94,7 +95,11 @@ void findStudent(std::vector<Student*>& students){
 	} // end if
 } // end printStudents
 
-
+void delStudents(std::vector<Student*>& students){
+        for(Student* student: students){
+        	delete student;
+	} // end for	
+} //end delStudents
 
 void testAddress(){
   Address a;
