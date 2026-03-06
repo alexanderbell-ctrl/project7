@@ -19,3 +19,6 @@ clean:
 
 run: students
 	./students
+
+valgrind: students
+	valgrind --leak-check=full ./students
