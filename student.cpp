@@ -47,7 +47,7 @@ void Student::init(std::string studentString){
 } // end init
 
 void Student::printStudent(){
-	std::cout << firstName << " " << lastName << std::endl;
+	std::cout << std::endl << firstName << " " << lastName << std::endl;
 
 	address->printAddress();
 
@@ -61,9 +61,9 @@ void Student::printStudent(){
 
 } //end printStudent
 
-void Student::getLastFirst(){
-	std::cout << std::endl;
-	std::cout << lastName << " " << firstName; 
+std::string Student::getLastFirst(){
+	std::string fullName = lastName + ", " + firstName;
+	return fullName;
 } //end getLastFirst
 
 int Student::getCreditHours(){

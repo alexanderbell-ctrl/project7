@@ -19,7 +19,7 @@ class Student{
 	    	Date* gradDate;
 		~Student();
 		void printStudent();
-		void getLastFirst();
+		std::string getLastFirst();
 		int getCreditHours();
 };
 

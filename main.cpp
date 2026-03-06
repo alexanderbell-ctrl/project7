@@ -4,6 +4,7 @@
 #include "student.h"
 #include <vector>
 #include <fstream>
+#include <string>
 
 void testAddress();
 void testDate();
@@ -33,7 +34,7 @@ int main(){
 			printStudents(students);
 		} // end if 2
 		else if(menuOption==3){
-			
+			findStudent(students);
 		} // end if 3
 		else{
 			whileTrue = false;	
@@ -65,7 +66,7 @@ void loadStudents(std::vector<Student*>& students){
 
 void showStudentNames(std::vector<Student*>& students){
 	for(Student* student: students){
-		student->getLastFirst();
+		std::cout << student->getLastFirst();
 		std::cout << ", " << student->getCreditHours() << std::endl;
 	} // end for
 } // end showStudentNames
@@ -75,6 +76,24 @@ void printStudents(std::vector<Student*>& students){
 		student->printStudent();
 	} // end for
 } // end printStudents
+
+void findStudent(std::vector<Student*>& students){
+	std::string studentFind;
+	std::cout << "Enter Student's Name: " << std::endl;
+	std::cin >> studentFind;
+	bool found = false;
+
+	for(Student* student: students){
+		if(student->getLastFirst().find(studentFind) != std::string::npos){
+			found = true;
+			std::cout << "FOUND!";
+		} // end if		
+	} // end for
+	if(found == false){
+		std::cout << "Name Not Found..." << std::endl;
+	} // end if
+} // end printStudents
+
 
 
 void testAddress(){
