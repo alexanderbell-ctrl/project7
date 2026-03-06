@@ -66,6 +66,38 @@ while keepGoing:
         findStudent
 delStudents
 ```
+## loadStudents
+```
+input file
+line input
+
+each line into line input
+    new student; init from line
+    add to vector
+```
+## printStudents
+```
+cycle throgh students
+    call printStudent
+```
+## showStudentNames
+```
+cycle through students
+    print student name, credit hrs
+```
+## findStudent
+``` 
+    ask for last name
+    cycle through students
+        if found, print student
+        if not, print "Student not found"
+```
+## delStudents
+```
+loop through students in vector
+    delete
+```
+
 ### Date
 -init(addressDate)
 ```
