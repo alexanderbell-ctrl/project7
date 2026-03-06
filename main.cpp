@@ -19,9 +19,27 @@ int main(){
 	std::vector<Student*> students;
 
 	loadStudents(students);
-	showStudentNames(students);
-	printStudents(students);
+	bool whileTrue = true;
 
+	while(whileTrue){
+		int menuOption;
+		std::cout << std::endl << "Please select an option..." << std::endl;
+		std::cout << "0 - Quit" << std::endl << "1 - Print Student Names" << std::endl << "2 - Print All Student Data" << std::endl << "3 - Find a Student" << std::endl;
+		std::cin >> menuOption;
+		if(menuOption==1){
+			showStudentNames(students);
+		} // end if 1
+		else if(menuOption==2){
+			printStudents(students);
+		} // end if 2
+		else if(menuOption==3){
+			
+		} // end if 3
+		else{
+			whileTrue = false;	
+		} // end if 0	
+
+	} // end while
 /*
   std::cout << "Hello!" << std::endl;
   //testAddress();
