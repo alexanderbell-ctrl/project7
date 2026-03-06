@@ -20,6 +20,7 @@ class Student{
 		~Student();
 		void printStudent();
 		void getLastFirst();
+		int getCreditHours();
 };
 
 #endif

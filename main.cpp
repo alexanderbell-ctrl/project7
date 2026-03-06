@@ -2,18 +2,54 @@
 #include "date.h"
 #include "address.h"
 #include "student.h"
+#include <vector>
+#include <fstream>
 
 void testAddress();
 void testDate();
 void testStudent();
+void loadStudents(std::vector<Student*>&);
+void printStudents(std::vector<Student*>&);
+void showStudentNames(std::vector<Student*>&);
+void findStudent(std::vector<Student*>&);
+void delStudents(std::vector<Student*>&);
 
 int main(){
+
+	std::vector<Student*> students;
+
+	loadStudents(students);
+	showStudentNames(students);
+
+/*
   std::cout << "Hello!" << std::endl;
   //testAddress();
   //testDate();
   testStudent();
+*/
   return 0;
 } // end main
+
+void loadStudents(std::vector<Student*>& students){
+	std::ifstream fileIN;
+	std::string currentLine;
+
+	fileIN.open("students.csv");
+	while(getline(fileIN, currentLine)){
+		Student* tempS = new Student();
+		tempS->init(currentLine);
+		students.push_back(tempS);
+	} // end while
+	fileIN.close();
+	
+} // end loadStudents
+
+void showStudentNames(std::vector<Student*>& students){
+	for(Student* student: students){
+		student->getLastFirst();
+		std::cout << ", " << student->getCreditHours() << std::endl;
+	} // end for
+} // end showStudentNames
 
 
 void testAddress(){

@@ -62,9 +62,13 @@ void Student::printStudent(){
 } //end printStudent
 
 void Student::getLastFirst(){
-	std::cout << "------------" << std::endl;
-	std::cout << lastName << " " << firstName << std::endl; 
+	std::cout << std::endl;
+	std::cout << lastName << " " << firstName; 
 } //end getLastFirst
+
+int Student::getCreditHours(){
+    return creditHours;
+}
 
 Student::~Student(){
 	delete address;
